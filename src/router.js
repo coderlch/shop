@@ -7,9 +7,9 @@ Vue.use(Router)
 
 const router = new Router({
   routes: [
-    { path: '/', redirect: '/login' },
-    { path: '/login', component: Login },
-    { path: '/home', component: Home }
+    {path: '/', redirect: '/login'},
+    {path: '/login', component: Login},
+    {path: '/home', component: Home}
   ]
 })
 
