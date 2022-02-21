@@ -5,10 +5,15 @@ import elementUI from 'element-ui'
 import './assets/fonts/iconfont.css'
 import './assets/css/global.css'
 import axios from 'axios'
+
 Vue.use(elementUI)
 
 // 配置请求的跟路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+axios.interceptors.request.use(conifg => {
+  conifg.headers.Authorization = window.sessionStorage.getItem('token')
+  return conifg
+})
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
