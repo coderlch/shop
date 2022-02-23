@@ -1,5 +1,6 @@
 <template>
   <el-container class='home-container'>
+    <!--    头部区域-->
     <el-header>
       <div>
         <img src='../assets/heima.png' alt=''>
@@ -7,7 +8,9 @@
       </div>
       <el-button type='info' @click='logout'>退出</el-button>
     </el-header>
+    <!--    主体区域-->
     <el-container>
+      <!--      左侧边栏-->
       <el-aside :width="isCollapse ? '64px' : '200px'">
         <div class='btn-collapse' @click='collapse'>|||</div>
         <el-menu background-color='#333744' text-color='#fff' active-text-color='#0866d7'
@@ -36,6 +39,7 @@
           </el-submenu>
         </el-menu>
       </el-aside>
+      <!--      右侧区域-->
       <el-main class='main'>
         <router-view></router-view>
       </el-main>
