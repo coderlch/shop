@@ -187,7 +187,6 @@ export default {
         if (res.meta.status !== 200) {
           return this.$message.error('获取数据失败')
         }
-        // console.log(res.data)
         res.data.forEach(item => {
           item.attr_vals = item.attr_vals.length !== 0 ? item.attr_vals.split(' ') : []
         })
@@ -202,7 +201,6 @@ export default {
           return this.$message.error('获取数据失败')
         }
         this.onlyTabData = res.data
-        // console.log(res.data)
       }
     },
     // 处理图片预览函数
